@@ -15,7 +15,7 @@
   },
   "about": {
     "heading": "About me",
-    "paragraph1": "I'm Yesid Hernandez, a mid full stack developer with 6 years of experience. I focus on backend systems and APIs, using Node.js, NestJS, React, and Next.js as my primary stack. I also work with PHP and Laravel, and have solid experience with SQL and NoSQL databases, cloud (AWS, Azure), Docker, and event-driven architectures with Kafka and Redis.",
+    "paragraph1": "I'm Yesid Hernandez, a mid full stack developer with <years>6 years</years> of experience. I focus on backend systems and APIs, using Node.js, NestJS, React, and Next.js as my primary stack. I also work with PHP and Laravel, and have solid experience with SQL and NoSQL databases, cloud (AWS, Azure), Docker, and event-driven architectures with Kafka and Redis.",
     "paragraph2": "I enjoy designing and implementing maintainable services and clean APIs, and I'm always improving my skills in Go and system design."
   },
   "education": {
@@ -42,5 +42,26 @@
   },
   "footer": {
     "rights": "All rights reserved."
+  },
+  "easterEggs": {
+    "konamiOn": "Achievement unlocked: you found the bug that wasn't on the backlog.",
+    "konamiOff": "Reality restored. For now.",
+    "logoRpg": "NPC Yesid: \"I also cast console.log('here') in production.\"",
+    "toastDismiss": "Dismiss",
+    "impostor": {
+      "level": "Impostor syndrome meter: {n}%",
+      "maxed": "Max level. Hire me anyway.",
+      "ariaYears": "Years of experience — hover for a silly meter"
+    },
+    "eggPage": {
+      "kicker": "Secret zone",
+      "title": "This is not a bug",
+      "body": "You followed an almost invisible link. Respect. There's no opening for Chief Easter Egg Officer yet — but we can talk about real roles.",
+      "back": "Back to sanity"
+    },
+    "duck": {
+      "speech": "I'm the rubber duck — I help you debug. Quack responsibly.",
+      "ariaFlipBack": "Flip back to profile photo"
+    }
   }
 }

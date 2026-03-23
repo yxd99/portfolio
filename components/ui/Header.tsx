@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { useSwitchLocale } from '@/components/i18n/ClientIntlProvider';
+import { dispatchLogoEggTap } from '@/components/easter-eggs/egg-events';
 
 const navLinks = [
   { key: 'about', href: '#about' },
@@ -27,6 +28,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-8">
         <Link
           href="/"
+          onClick={() => dispatchLogoEggTap()}
           className="text-lg font-bold text-foreground hover:text-accent transition-colors duration-200 tracking-tight"
         >
           YH

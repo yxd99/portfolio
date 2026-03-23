@@ -45,6 +45,126 @@ body {
   background: var(--background);
 }
 
+/* Konami / dev-mode easter egg: silly inverted colors; photos double-inverted */
+html.egg-konami {
+  filter: invert(1) hue-rotate(180deg);
+}
+html.egg-konami img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Hero rubber-duck easter egg: 3D flip + comic bubble */
+.hero-duck-perspective {
+  perspective: 1100px;
+}
+
+.hero-duck-flip-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-duck-flip-inner--flipped {
+  transform: rotateY(180deg);
+}
+
+.hero-duck-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.hero-duck-face--back {
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-duck-flip-inner {
+    transition-duration: 0.01ms;
+  }
+}
+
+/*
+ * Burbuja cómic: papel + tinta fijos (no usa --foreground del tema) para máximo contraste.
+ * Además la columna de la foto usa z-20 para que la burbuja no quede *debajo* del texto del hero.
+ */
+.comic-bubble {
+  --comic-ink: #0a0a0b;
+  --comic-paper: #fffef2;
+
+  position: relative;
+  z-index: 30;
+  isolation: isolate;
+  overflow: visible;
+  padding: 0.85rem 1rem 0.95rem;
+  color: var(--comic-ink);
+  background-color: var(--comic-paper);
+  border: 3px solid var(--comic-ink);
+  border-radius: 1rem;
+  box-shadow:
+    5px 5px 0 0 var(--comic-ink),
+    inset 0 1px 0 rgb(255 255 255 / 0.75);
+}
+
+.comic-bubble p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: var(--comic-ink);
+  text-shadow: none;
+}
+
+/* Cola doble: borde tinta + relleno papel (pseudo-elementos, siempre por encima del fondo de la caja) */
+.comic-bubble::before,
+.comic-bubble::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Móvil: burbuja debajo del pato → triángulo apunta hacia arriba */
+.comic-bubble::before {
+  left: 22%;
+  bottom: 100%;
+  transform: translate(-50%, 2px);
+  border-style: solid;
+  border-width: 0 17px 22px 17px;
+  border-color: transparent transparent var(--comic-ink) transparent;
+}
+
+.comic-bubble::after {
+  left: 22%;
+  bottom: 100%;
+  transform: translate(-50%, 6px);
+  border-style: solid;
+  border-width: 0 13px 17px 13px;
+  border-color: transparent transparent var(--comic-paper) transparent;
+}
+
+@media (min-width: 1024px) {
+  /* Escritorio: cola a la izquierda apuntando al pato */
+  .comic-bubble::before {
+    left: auto;
+    bottom: auto;
+    top: 50%;
+    right: 100%;
+    transform: translate(3px, -50%);
+    border-width: 16px 22px 16px 0;
+    border-color: transparent var(--comic-ink) transparent transparent;
+  }
+
+  .comic-bubble::after {
+    left: auto;
+    bottom: auto;
+    top: 50%;
+    right: 100%;
+    transform: translate(7px, -50%);
+    border-width: 12px 17px 12px 0;
+    border-color: transparent var(--comic-paper) transparent transparent;
+  }
+}
+
 .bg-grid {
   background-image:
     linear-gradient(to right, var(--card-border) 1px, transparent 1px),

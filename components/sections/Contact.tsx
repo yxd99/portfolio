@@ -31,7 +31,7 @@ export function Contact() {
         <Reveal delayMs={80}>
           <p className="mt-4 text-muted text-lg">{t('subheading')}</p>
         </Reveal>
-        <Reveal delayMs={140}>
+        <Reveal delayMs={120}>
           <div className="mt-10 flex flex-wrap justify-center gap-3 sm:gap-4">
             <a
               href={personal.github}

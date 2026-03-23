@@ -5,6 +5,7 @@ import { ClientIntlProvider } from '@/components/i18n/ClientIntlProvider';
 import { Header } from '@/components/ui/Header';
 import { JsonLdPerson, JsonLdWebSite } from '@/components/seo/JsonLd';
 import { SetHtmlLang } from '@/components/seo/SetHtmlLang';
+import { PortfolioEasterEggs } from '@/components/easter-eggs/PortfolioEasterEggs';
 import { personal } from '@/data/personal';
 import enMessages from '@/messages/en.json';
 import esMessages from '@/messages/es.json';
@@ -62,6 +63,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <JsonLdWebSite locale={locale} />
       <Header />
       <main className="min-h-screen">{children}</main>
+      <PortfolioEasterEggs />
     </ClientIntlProvider>
   );
 }

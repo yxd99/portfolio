@@ -2,6 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { personal } from '@/data/personal';
+import { ImpostorYears } from '@/components/easter-eggs/ImpostorYears';
+import { HeroDuckEgg } from '@/components/easter-eggs/HeroDuckEgg';
 
 export function Hero() {
   const tHero = useTranslations('hero');
@@ -19,24 +21,12 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-14">
-          {/* Columna izquierda: foto */}
-          <div className="flex-shrink-0 lg:w-[280px] xl:w-[320px] animate-fade-up motion-reduce:animate-none">
-            <div className="relative">
-              <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-accent/20 to-transparent opacity-60 animate-accent-shimmer motion-reduce:animate-none" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/me.jpg"
-                alt={personal.name}
-                width={320}
-                height={320}
-                loading="eager"
-                className="relative rounded-2xl object-cover aspect-square w-full max-w-[220px] sm:max-w-[260px] lg:max-w-none border border-card-border shadow-[var(--shadow-card-hover)] ring-2 ring-background/80 transition-transform duration-500 ease-out hover:scale-[1.02] motion-reduce:hover:scale-100"
-              />
-            </div>
+          {/* z-20: la burbuja del easter egg se dibuja hacia la derecha y debe quedar por encima del texto del hero */}
+          <div className="relative z-20 flex-shrink-0 lg:w-[280px] xl:w-[320px] animate-fade-up motion-reduce:animate-none">
+            <HeroDuckEgg photoSrc="/images/me.jpg" photoAlt={personal.name} duckSrc="/images/duck.png" />
           </div>
 
-          {/* Columna derecha: nombre, rol, acerca de mí */}
-          <div className="min-w-0 flex-1">
+          <div className="relative z-0 min-w-0 flex-1">
             <p className="text-sm font-semibold tracking-widest text-accent uppercase animate-fade-up motion-reduce:animate-none delay-75">
               {tHero('greeting')}
             </p>
@@ -54,7 +44,11 @@ export function Hero() {
             </p>
 
             <div className="mt-8 space-y-4 text-muted leading-relaxed text-base sm:text-lg">
-              <p className="animate-fade-up motion-reduce:animate-none delay-500">{tAbout('paragraph1')}</p>
+              <p className="animate-fade-up motion-reduce:animate-none delay-500">
+                {tAbout.rich('paragraph1', {
+                  years: (chunks) => <ImpostorYears>{chunks}</ImpostorYears>,
+                })}
+              </p>
               <p className="animate-fade-up motion-reduce:animate-none delay-700">{tAbout('paragraph2')}</p>
             </div>
 
