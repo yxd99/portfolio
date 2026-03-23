@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "title": "Mid Full Stack Developer",
+    "tagline": "Backend-oriented developer building scalable systems with Node.js, Nest.js & React.",
+    "ctaExperience": "View experience",
+    "ctaContact": "Get in touch"
+  },
+  "about": {
+    "heading": "About me",
+    "paragraph1": "I'm Yesid Hernandez, a mid full stack developer with 6 years of experience. I focus on backend systems and APIs, using Node.js, NestJS, React, and Next.js as my primary stack. I also work with PHP and Laravel, and have solid experience with SQL and NoSQL databases, cloud (AWS, Azure), Docker, and event-driven architectures with Kafka and Redis.",
+    "paragraph2": "I enjoy designing and implementing maintainable services and clean APIs, and I'm always improving my skills in Go and system design."
+  },
+  "education": {
+    "heading": "Education"
+  },
+  "experience": {
+    "heading": "Experience",
+    "present": "Present",
+    "impacts": "Key contributions"
+  },
+  "skills": {
+    "heading": "Skills",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "databases": "Databases",
+    "devops": "DevOps & Cloud",
+    "tools": "Tools & messaging"
+  },
+  "contact": {
+    "heading": "Get in touch",
+    "subheading": "Open to new opportunities and collaborations.",
+    "copyEmail": "Copy email",
+    "emailCopied": "Email copied"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

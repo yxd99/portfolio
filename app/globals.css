@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --muted: #a1a1aa;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-foreground: #fff;
+  --card: #18181b;
+  --card-hover: #1f1f23;
+  --card-border: #27272a;
+  --section-padding: 5rem;
+  --content-max: 72rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.15), 0 1px 2px -1px rgb(0 0 0 / 0.15);
+  --shadow-card-hover: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.15);
+  --shadow-glow: 0 0 40px -8px rgba(59, 130, 246, 0.25);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #f8fafc;
+    --foreground: #0f172a;
+    --muted: #64748b;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-foreground: #fff;
+    --card: #ffffff;
+    --card-hover: #f1f5f9;
+    --card-border: #e2e8f0;
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+    --shadow-card-hover: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+    --shadow-glow: 0 0 40px -8px rgba(37, 99, 235, 0.2);
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--card-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--card-border) 1px, transparent 1px);
+  background-size: 64px 64px;
+  opacity: 0.35;
+}
+
+@media (prefers-color-scheme: light) {
+  .bg-grid {
+    opacity: 0.2;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.section-heading {
+  @apply text-2xl font-bold tracking-tight text-foreground sm:text-3xl;
+}
+
+.section-heading-accent {
+  @apply relative inline-block after:absolute after:left-0 after:bottom-[-6px] after:h-0.5 after:w-12 after:rounded-full after:bg-accent;
+}
+
+.section-heading-accent-center {
+  @apply relative inline-block after:absolute after:left-1/2 after:bottom-[-6px] after:h-0.5 after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-accent;
+}
+
+.card-hover {
+  @apply transition-all duration-300 ease-out;
+  box-shadow: var(--shadow-card);
+}
+.card-hover:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: color-mix(in srgb, var(--accent) 20%, var(--card-border));
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-hover:hover {
+    transform: none;
+  }
+}

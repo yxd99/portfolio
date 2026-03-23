@@ -1,0 +1,29 @@
+import type { Metadata } from 'next';
+import { Plus_Jakarta_Sans } from 'next/font/google';
+import './globals.css';
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-geist-sans',
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  title: 'Yesid Hernandez | Full Stack Developer',
+  description:
+    'Mid Full Stack Developer with 6 years of experience. Node.js, NestJS, React, Next.js. Backend-oriented, scalable systems.',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className={plusJakarta.variable} suppressHydrationWarning>
+      <body className="min-h-screen font-sans antialiased bg-background text-foreground">
+        {children}
+      </body>
+    </html>
+  );
+}
