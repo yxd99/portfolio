@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const isEn = locale === 'en';
   const title = `${personal.name} | ${personal.title}`;
   const description = isEn
-    ? 'Mid Full Stack Developer with 6 years of experience. Node.js, NestJS, React, Next.js. Backend-oriented, scalable systems.'
-    : 'Desarrollador Full Stack con 6 años de experiencia. Node.js, NestJS, React, Next.js. Sistemas escalables orientados al backend.';
+    ? 'Fullstack Developer with 6 years of experience. Node.js, NestJS, React, Next.js. Backend-oriented, scalable systems.'
+    : 'Desarrollador Fullstack con 6 años de experiencia. Node.js, NestJS, React, Next.js. Sistemas escalables orientados al backend.';
 
   return {
     title,

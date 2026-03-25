@@ -8,14 +8,14 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "title": "Mid Full Stack Developer",
+    "title": "Fullstack Developer",
     "tagline": "Backend-oriented developer building scalable systems with Node.js, Nest.js & React.",
     "ctaExperience": "View experience",
     "ctaContact": "Get in touch"
   },
   "about": {
     "heading": "About me",
-    "paragraph1": "I'm Yesid Hernandez, a mid full stack developer with <years>6 years</years> of experience. I focus on backend systems and APIs, using Node.js, NestJS, React, and Next.js as my primary stack. I also work with PHP and Laravel, and have solid experience with SQL and NoSQL databases, cloud (AWS, Azure), Docker, and event-driven architectures with Kafka and Redis.",
+    "paragraph1": "I'm Yesid Hernandez, a fullstack developer with <years>6 years</years> of experience. I focus on backend systems and APIs, using Node.js, NestJS, React, and Next.js as my primary stack. I also work with PHP and Laravel, and have solid experience with SQL and NoSQL databases, cloud (AWS, Azure), Docker, and event-driven architectures with Kafka and Redis.",
     "paragraph2": "I enjoy designing and implementing maintainable services and clean APIs, and I'm always improving my skills in Go and system design."
   },
   "education": {

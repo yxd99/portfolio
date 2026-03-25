@@ -9,9 +9,9 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Yesid Hernandez | Full Stack Developer',
+  title: 'Yesid Hernandez | Fullstack Developer',
   description:
-    'Mid Full Stack Developer with 6 years of experience. Node.js, NestJS, React, Next.js. Backend-oriented, scalable systems.',
+    'Fullstack Developer with 6 years of experience. Node.js, NestJS, React, Next.js. Backend-oriented, scalable systems.',
 };
 
 export default function RootLayout({

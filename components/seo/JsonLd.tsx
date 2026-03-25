@@ -15,8 +15,8 @@ export function JsonLdPerson({ locale }: Props) {
     sameAs: [personal.github, personal.linkedin],
     description:
       locale === 'es'
-        ? 'Desarrollador Full Stack con 6 años de experiencia. Node.js, NestJS, React, Next.js.'
-        : 'Mid Full Stack Developer with 6 years of experience. Node.js, NestJS, React, Next.js.',
+        ? 'Desarrollador Fullstack con 6 años de experiencia. Node.js, NestJS, React, Next.js.'
+        : 'Fullstack Developer with 6 years of experience. Node.js, NestJS, React, Next.js.',
   };
 
   return (
@@ -35,8 +35,8 @@ export function JsonLdWebSite({ locale }: Props) {
     url: baseUrl,
     description:
       locale === 'es'
-        ? 'Portfolio de Yesid Hernandez, desarrollador Full Stack.'
-        : 'Yesid Hernandez Full Stack Developer portfolio.',
+        ? 'Portfolio de Yesid Hernandez, desarrollador Fullstack.'
+        : 'Yesid Hernandez Fullstack Developer portfolio.',
     inLanguage: locale === 'es' ? 'es' : 'en',
     author: {
       '@type': 'Person',

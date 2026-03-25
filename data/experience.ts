@@ -35,7 +35,7 @@ export const experience: ExperienceEntry[] = [
   {
     id: 'magiclog',
     company: 'MagicLog',
-    role: 'Mid Fullstack Developer',
+    role: 'Fullstack Developer',
     startDate: '2025-04',
     endDate: '2025-11',
     description: {
@@ -58,7 +58,7 @@ export const experience: ExperienceEntry[] = [
   {
     id: 'tbb',
     company: 'TBB',
-    role: 'Ssr FullStack Developer',
+    role: 'Fullstack Developer',
     startDate: '2024-06',
     endDate: '2025-04',
     description: {
@@ -79,7 +79,7 @@ export const experience: ExperienceEntry[] = [
   {
     id: 'bemaster',
     company: 'BeMaster',
-    role: 'FullStack Developer',
+    role: 'Fullstack Developer',
     startDate: '2024-02',
     endDate: '2024-11',
     description: {
