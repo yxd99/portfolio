@@ -7,7 +7,8 @@
     "contact": "Contacto",
     "openMenu": "Abrir menú de navegación",
     "closeMenu": "Cerrar menú de navegación",
-    "ariaMain": "Navegación principal"
+    "ariaMain": "Navegación principal",
+    "menuKicker": "Menú"
   },
   "hero": {
     "greeting": "Hola, soy",
