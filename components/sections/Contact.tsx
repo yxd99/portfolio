@@ -2,19 +2,10 @@
 
 import { useTranslations } from 'next-intl';
 import { personal } from '@/data/personal';
-import { useCallback, useState } from 'react';
 import { Reveal } from '@/components/ui/Reveal';
 
 export function Contact() {
   const t = useTranslations('contact');
-  const [copied, setCopied] = useState(false);
-
-  const copyEmail = useCallback(() => {
-    navigator.clipboard.writeText(personal.email).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
-  }, []);
 
   return (
     <section
@@ -57,13 +48,6 @@ export function Contact() {
             >
               Email
             </a>
-            <button
-              type="button"
-              onClick={copyEmail}
-              className="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/25 transition-all duration-200 hover:opacity-90 hover:shadow-[var(--shadow-glow)] active:scale-[0.98] motion-reduce:active:scale-100"
-            >
-              {copied ? t('emailCopied') : t('copyEmail')}
-            </button>
           </div>
         </Reveal>
       </div>

@@ -24,7 +24,10 @@
   "experience": {
     "heading": "Experience",
     "present": "Present",
-    "impacts": "Key contributions"
+    "impacts": "Key contributions",
+    "durationYearOnly": "{count, plural, one {# year} other {# years}}",
+    "durationMonthOnly": "{count, plural, one {# month} other {# months}}",
+    "durationBoth": "{years} and {months}"
   },
   "skills": {
     "heading": "Skills",
@@ -36,9 +39,7 @@
   },
   "contact": {
     "heading": "Get in touch",
-    "subheading": "Open to new opportunities and collaborations.",
-    "copyEmail": "Copy email",
-    "emailCopied": "Email copied"
+    "subheading": "Open to new opportunities and collaborations."
   },
   "footer": {
     "rights": "All rights reserved."

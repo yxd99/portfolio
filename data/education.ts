@@ -8,16 +8,6 @@ export type EducationEntry = {
 
 export const education: EducationEntry[] = [
   {
-    id: 'sena-technician',
-    institution: 'Servicio Nacional del Aprendizaje (SENA)',
-    degree: {
-      en: 'Technician in Software Programming',
-      es: 'Técnico en Programación de Software',
-    },
-    startYear: 2018,
-    endYear: 2019,
-  },
-  {
     id: 'sena-technologist',
     institution: 'Servicio Nacional del Aprendizaje (SENA)',
     degree: {
@@ -27,4 +17,15 @@ export const education: EducationEntry[] = [
     startYear: 2021,
     endYear: 2023,
   },
+  {
+    id: 'sena-technician',
+    institution: 'Servicio Nacional del Aprendizaje (SENA)',
+    degree: {
+      en: 'Technician in Software Programming',
+      es: 'Técnico en Programación de Software',
+    },
+    startYear: 2018,
+    endYear: 2019,
+  },
+  
 ];

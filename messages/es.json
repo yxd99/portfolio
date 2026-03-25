@@ -24,7 +24,10 @@
   "experience": {
     "heading": "Experiencia",
     "present": "Presente",
-    "impacts": "Contribuciones clave"
+    "impacts": "Contribuciones clave",
+    "durationYearOnly": "{count, plural, one {# año} other {# años}}",
+    "durationMonthOnly": "{count, plural, one {# mes} other {# meses}}",
+    "durationBoth": "{years} y {months}"
   },
   "skills": {
     "heading": "Skills",
@@ -36,9 +39,7 @@
   },
   "contact": {
     "heading": "Contacto",
-    "subheading": "Abierto a nuevas oportunidades y colaboraciones.",
-    "copyEmail": "Copiar email",
-    "emailCopied": "Email copiado"
+    "subheading": "Abierto a nuevas oportunidades y colaboraciones."
   },
   "footer": {
     "rights": "Todos los derechos reservados."
