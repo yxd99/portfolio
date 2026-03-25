@@ -19,14 +19,14 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-accent/6 via-transparent to-transparent pointer-events-none" />
       <div className="absolute right-0 top-0 h-full w-1/2 max-w-xl bg-gradient-to-l from-accent/5 to-transparent pointer-events-none" />
 
-      <div className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-14">
+      <div className="relative mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20 lg:py-24">
+        <div className="flex flex-col items-center gap-10 text-center lg:flex-row lg:items-start lg:gap-14 lg:text-left">
           {/* z-20: la burbuja del easter egg se dibuja hacia la derecha y debe quedar por encima del texto del hero */}
-          <div className="relative z-20 flex-shrink-0 lg:w-[280px] xl:w-[320px] animate-fade-up motion-reduce:animate-none">
+          <div className="relative z-20 mx-auto w-[min(100%,220px)] shrink-0 sm:w-[min(100%,260px)] md:w-[min(100%,280px)] lg:mx-0 lg:w-[280px] xl:w-[320px] animate-fade-up motion-reduce:animate-none">
             <HeroDuckEgg photoSrc="/images/me.jpg" photoAlt={personal.name} duckSrc="/images/duck.png" />
           </div>
 
-          <div className="relative z-0 min-w-0 flex-1">
+          <div className="relative z-0 min-w-0 w-full max-w-2xl flex-1 lg:max-w-none">
             <p className="text-sm font-semibold tracking-widest text-accent uppercase animate-fade-up motion-reduce:animate-none delay-75">
               {tHero('greeting')}
             </p>
@@ -52,7 +52,7 @@ export function Hero() {
               <p className="animate-fade-up motion-reduce:animate-none delay-700">{tAbout('paragraph2')}</p>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-3 animate-fade-up motion-reduce:animate-none delay-1000">
+            <div className="mt-10 flex flex-wrap justify-center gap-3 lg:justify-start animate-fade-up motion-reduce:animate-none delay-1000">
               <a
                 href="#experience"
                 className="inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/25 hover:opacity-90 hover:shadow-[var(--shadow-glow)] active:scale-[0.98] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background motion-reduce:active:scale-100"

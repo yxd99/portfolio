@@ -39,11 +39,11 @@ export function Education() {
                     {idx + 1}
                   </span>
                   <div className="min-w-0 flex-1 rounded-xl border border-card-border bg-card p-5 shadow-[var(--shadow-card)] sm:p-6 card-hover">
-                    <div className="flex flex-wrap items-baseline justify-between gap-2">
-                      <h3 className="text-lg font-semibold text-foreground">
+                    <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-between sm:gap-x-2 sm:gap-y-1">
+                      <h3 className="text-lg font-semibold text-foreground text-balance">
                         {entry.degree[locale]}
                       </h3>
-                      <p className="text-sm font-medium text-muted tabular-nums">
+                      <p className="text-sm font-medium text-muted tabular-nums sm:shrink-0">
                         {entry.startYear} – {entry.endYear}
                       </p>
                     </div>

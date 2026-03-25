@@ -4,7 +4,10 @@
     "experience": "Experiencia",
     "education": "Educación",
     "skills": "Skills",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "openMenu": "Abrir menú de navegación",
+    "closeMenu": "Cerrar menú de navegación",
+    "ariaMain": "Navegación principal"
   },
   "hero": {
     "greeting": "Hola, soy",

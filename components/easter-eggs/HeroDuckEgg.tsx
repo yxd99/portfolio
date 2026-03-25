@@ -64,7 +64,7 @@ export function HeroDuckEgg({ photoSrc, photoAlt, duckSrc = DUCK_DEFAULT }: Prop
   const showBubble = flipped && bubbleVisible;
 
   return (
-    <div className="relative w-full max-w-[220px] sm:max-w-[260px] lg:max-w-none">
+    <div className="relative w-full">
       <div className="pointer-events-none absolute -inset-2 rounded-2xl bg-gradient-to-br from-accent/20 to-transparent opacity-60 animate-accent-shimmer motion-reduce:animate-none" />
 
       <div className="relative flex flex-col items-stretch lg:block">
